@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
                 builder: (context, balance, _) => FloatingActionButton(
                   onPressed: () {
                     if (balance.money >= 500) {
-                      balance.money -= 500;
-                      cart.qty += 1;
+                      balance.decrementBalance();
+                      cart.incrementCart();
                     }
                   },
                   child: Icon(Icons.add_shopping_cart),
